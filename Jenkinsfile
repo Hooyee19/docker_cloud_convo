@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-       imagename = "tkibnyusuf/jan_docker_project"
+       imagename = "tkibnyusuf/newaugustapp"
        registryCredential = 'dockerpass'
        dockerImage = ''
            }
@@ -28,7 +28,7 @@ pipeline {
           steps{
                 script {
                    dockerImage = docker.build imagename + ":$BUILD_NUMBER"
-                          } 
+                          }
                       }
                 }
 
